@@ -9,6 +9,8 @@
   $ docker run -i -t -v PATH/TO/DIRECTORY/ON/HOST:/artifacts host2host "/artifacts"
   ```
   
+  Result: The built site files in `PATH/TO/DIRECTORY/ON/HOST`.
+  
 * `hakyll-repo-to-host`: Given a public Git repository and a branch, pulls the repository, switches to the branch and builds it. Then it outputs it to the `/artifacts` mounted volume.
 
   Usage:
@@ -17,3 +19,5 @@
   $ docker build -t=repo2host .
   $ docker run -i -t -v PATH/TO/DIRECTORY/ON/HOST:/artifacts repo2host "https://github.com/beerendlauwers/beerendlauwers.github.io.git" "remotes/origin/code"
   ```
+  
+  Result: The built site files in `PATH/TO/DIRECTORY/ON/HOST`.
