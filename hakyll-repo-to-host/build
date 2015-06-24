@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+git clone $1 clone || exit 1
+cd clone
+git checkout $2
+ghc --make -fforce-recomp site.hs
+./site build
+echo Copying to host...
+cd _site
+cp . /artifacts -R
+echo Copied to host.

@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+echo Compiling site...
+cd $1
+ghc --make -fforce-recomp site.hs
+./site build
+echo Site compiled.
